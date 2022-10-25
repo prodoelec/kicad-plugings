@@ -1,0 +1,14 @@
+{
+  "MultiLineText": "F",
+  "HeightCtrl": "1.5",
+  "FontComboBox": "FredokaOne",
+  "LayerComboBox": "F.SilkS",
+  "CapLeftChoice": "<",
+  "CapRightChoice": "]",
+  "PaddingTopCtrl": "5",
+  "PaddingLeftCtrl": "5",
+  "PaddingRightCtrl": "5",
+  "PaddingBottomCtrl": "5",
+  "WidthCtrl": "1.5",
+  "AlignmentChoice": "Center"
+}
