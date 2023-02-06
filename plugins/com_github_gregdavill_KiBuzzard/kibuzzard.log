@@ -13542,3 +13542,99 @@
 10-25 10:43:50 svg2mod 278:  Inlining 1 segments...
 10-25 10:43:50 svg2mod 329:  Writing Text with 45 points
 10-25 10:54:35 shapely.geos 190:Found GEOS DLL: <CDLL 'C:\Users\root\Documents\KiCad\6.0\3rdparty\Python39\site-packages\Shapely.libs\geos_c-84d02d5b10aa37e3ab60a885dc5b531b.dll', handle 7ffbe41a0000 at 0x1f336bc4b50>, using it.
+02-06 09:07:42 svg2mod 1217:Font "FredokaOne" does not natively support style "Regular" using "Path" instead
+02-06 09:07:42 svg2mod 1217:Font "FredokaOne" does not natively support style "Regular" using "Path" instead
+02-06 09:07:42 svg2mod 1270:Unsuported character in <text> element ""
+02-06 09:07:42 svg2mod-unfiltered 253:Found SVG layer: F.SilkS
+02-06 09:07:42 svg2mod 254:  Detailed names: [F.SilkS]
+02-06 09:07:42 svg2mod 278:  Inlining 5 segments...
+02-06 09:07:42 svg2mod 329:  Writing Text with 174 points
+02-06 09:07:42 svg2mod 329:  Writing Text with 4 points
+02-06 09:07:44 svg2mod-unfiltered 253:Found SVG layer: F.SilkS
+02-06 09:07:44 svg2mod 254:  Detailed names: [F.SilkS]
+02-06 09:07:44 svg2mod 278:  Inlining 5 segments...
+02-06 09:07:44 svg2mod 329:  Writing Text with 174 points
+02-06 09:07:44 svg2mod 329:  Writing Text with 4 points
+02-06 09:07:51 svg2mod 1217:Font "FredokaOne" does not natively support style "Regular" using "Path" instead
+02-06 09:07:51 svg2mod-unfiltered 253:Found SVG layer: F.SilkS
+02-06 09:07:51 svg2mod 254:  Detailed names: [F.SilkS]
+02-06 09:07:51 svg2mod 278:  Inlining 1 segments...
+02-06 09:07:51 svg2mod 329:  Writing Text with 43 points
+02-06 09:07:51 svg2mod 329:  Writing Text with 9 points
+02-06 09:07:51 svg2mod 1217:Font "FredokaOne" does not natively support style "Regular" using "Path" instead
+02-06 09:07:51 svg2mod-unfiltered 253:Found SVG layer: F.SilkS
+02-06 09:07:51 svg2mod 254:  Detailed names: [F.SilkS]
+02-06 09:07:51 svg2mod 278:  Inlining 2 segments...
+02-06 09:07:51 svg2mod 329:  Writing Text with 76 points
+02-06 09:07:51 svg2mod 329:  Writing Text with 9 points
+02-06 09:07:51 svg2mod 329:  Writing Text with 9 points
+02-06 09:07:53 svg2mod-unfiltered 253:Found SVG layer: F.SilkS
+02-06 09:07:53 svg2mod 254:  Detailed names: [F.SilkS]
+02-06 09:07:53 svg2mod 278:  Inlining 2 segments...
+02-06 09:07:53 svg2mod 329:  Writing Text with 76 points
+02-06 09:07:53 svg2mod 329:  Writing Text with 9 points
+02-06 09:07:53 svg2mod 329:  Writing Text with 9 points
+02-06 09:12:39 svg2mod 1217:Font "FredokaOne" does not natively support style "Regular" using "Path" instead
+02-06 09:12:39 svg2mod-unfiltered 253:Found SVG layer: F.SilkS
+02-06 09:12:39 svg2mod 254:  Detailed names: [F.SilkS]
+02-06 09:12:39 svg2mod 278:  Inlining 1 segments...
+02-06 09:12:39 svg2mod 329:  Writing Text with 43 points
+02-06 09:12:39 svg2mod 329:  Writing Text with 9 points
+02-06 09:12:39 svg2mod 1217:Font "FredokaOne" does not natively support style "Regular" using "Path" instead
+02-06 09:12:39 svg2mod-unfiltered 253:Found SVG layer: F.SilkS
+02-06 09:12:39 svg2mod 254:  Detailed names: [F.SilkS]
+02-06 09:12:39 svg2mod 278:  Inlining 2 segments...
+02-06 09:12:39 svg2mod 329:  Writing Text with 76 points
+02-06 09:12:39 svg2mod 329:  Writing Text with 9 points
+02-06 09:12:39 svg2mod 329:  Writing Text with 9 points
+02-06 09:12:45 svg2mod 1217:Font "FredokaOne" does not natively support style "Regular" using "Path" instead
+02-06 09:12:45 svg2mod-unfiltered 253:Found SVG layer: F.SilkS
+02-06 09:12:45 svg2mod 254:  Detailed names: [F.SilkS]
+02-06 09:12:45 svg2mod 278:  Inlining 2 segments...
+02-06 09:12:45 svg2mod 329:  Writing Text with 76 points
+02-06 09:12:45 svg2mod 329:  Writing Text with 9 points
+02-06 09:12:45 svg2mod 329:  Writing Text with 9 points
+02-06 09:12:46 svg2mod-unfiltered 253:Found SVG layer: F.Cu
+02-06 09:12:46 svg2mod 254:  Detailed names: [F.Cu]
+02-06 09:12:46 svg2mod 278:  Inlining 2 segments...
+02-06 09:12:46 svg2mod 329:  Writing Text with 76 points
+02-06 09:12:46 svg2mod 329:  Writing Text with 9 points
+02-06 09:12:46 svg2mod 329:  Writing Text with 9 points
+02-06 09:12:56 svg2mod 1217:Font "FredokaOne" does not natively support style "Regular" using "Path" instead
+02-06 09:12:56 svg2mod-unfiltered 253:Found SVG layer: F.SilkS
+02-06 09:12:56 svg2mod 254:  Detailed names: [F.SilkS]
+02-06 09:12:56 svg2mod 278:  Inlining 1 segments...
+02-06 09:12:56 svg2mod 329:  Writing Text with 43 points
+02-06 09:12:56 svg2mod 329:  Writing Text with 9 points
+02-06 09:12:56 svg2mod 1217:Font "FredokaOne" does not natively support style "Regular" using "Path" instead
+02-06 09:12:56 svg2mod-unfiltered 253:Found SVG layer: F.SilkS
+02-06 09:12:56 svg2mod 254:  Detailed names: [F.SilkS]
+02-06 09:12:56 svg2mod 278:  Inlining 2 segments...
+02-06 09:12:56 svg2mod 329:  Writing Text with 76 points
+02-06 09:12:56 svg2mod 329:  Writing Text with 9 points
+02-06 09:12:56 svg2mod 329:  Writing Text with 9 points
+02-06 09:12:58 svg2mod-unfiltered 253:Found SVG layer: F.Cu
+02-06 09:12:58 svg2mod 254:  Detailed names: [F.Cu]
+02-06 09:12:58 svg2mod 278:  Inlining 2 segments...
+02-06 09:12:58 svg2mod 329:  Writing Text with 76 points
+02-06 09:12:58 svg2mod 329:  Writing Text with 9 points
+02-06 09:12:58 svg2mod 329:  Writing Text with 9 points
+02-06 09:13:08 svg2mod 1217:Font "FredokaOne" does not natively support style "Regular" using "Path" instead
+02-06 09:13:08 svg2mod-unfiltered 253:Found SVG layer: F.SilkS
+02-06 09:13:08 svg2mod 254:  Detailed names: [F.SilkS]
+02-06 09:13:08 svg2mod 278:  Inlining 1 segments...
+02-06 09:13:08 svg2mod 329:  Writing Text with 43 points
+02-06 09:13:08 svg2mod 329:  Writing Text with 9 points
+02-06 09:13:08 svg2mod 1217:Font "FredokaOne" does not natively support style "Regular" using "Path" instead
+02-06 09:13:08 svg2mod-unfiltered 253:Found SVG layer: F.SilkS
+02-06 09:13:08 svg2mod 254:  Detailed names: [F.SilkS]
+02-06 09:13:08 svg2mod 278:  Inlining 2 segments...
+02-06 09:13:08 svg2mod 329:  Writing Text with 76 points
+02-06 09:13:08 svg2mod 329:  Writing Text with 9 points
+02-06 09:13:08 svg2mod 329:  Writing Text with 9 points
+02-06 09:13:10 svg2mod-unfiltered 253:Found SVG layer: F.Cu
+02-06 09:13:10 svg2mod 254:  Detailed names: [F.Cu]
+02-06 09:13:10 svg2mod 278:  Inlining 2 segments...
+02-06 09:13:10 svg2mod 329:  Writing Text with 76 points
+02-06 09:13:10 svg2mod 329:  Writing Text with 9 points
+02-06 09:13:10 svg2mod 329:  Writing Text with 9 points
