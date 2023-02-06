@@ -1,14 +1,14 @@
 {
-  "MultiLineText": "F",
-  "HeightCtrl": "1.5",
+  "MultiLineText": "AP",
+  "HeightCtrl": "1.2",
   "FontComboBox": "FredokaOne",
   "LayerComboBox": "F.SilkS",
-  "CapLeftChoice": "<",
+  "CapLeftChoice": "[",
   "CapRightChoice": "]",
-  "PaddingTopCtrl": "5",
-  "PaddingLeftCtrl": "5",
-  "PaddingRightCtrl": "5",
-  "PaddingBottomCtrl": "5",
-  "WidthCtrl": "1.5",
+  "PaddingTopCtrl": "2",
+  "PaddingLeftCtrl": "2",
+  "PaddingRightCtrl": "2",
+  "PaddingBottomCtrl": "2",
+  "WidthCtrl": "1.2",
   "AlignmentChoice": "Center"
 }
