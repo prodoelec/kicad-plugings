@@ -1,8 +1,10 @@
 import os
 import wx
+import pcbnew
 import shutil
 import tempfile
 import webbrowser
+import datetime
 from threading import Thread
 from .events import StatusEvent
 from .process import ProcessManager
@@ -19,36 +21,48 @@ class ProcessThread(Thread):
 
     def run(self):
         # initializing
-        self.report(0)
+        self.progress(0)
 
-        temp_dir = tempfile.mkdtemp()
+        timestamp = datetime.datetime.now().strftime('%Y-%m-%d %H-%M-%S')
+
+        temp_dir = tempfile.mkdtemp() + timestamp
+        os.makedirs(temp_dir)
+        os.makedirs(temp_dir + "_g")
+
         _, temp_file = tempfile.mkstemp()
         project_directory = os.path.dirname(self.process_manager.board.GetFileName())
-        output_path = os.path.join(project_directory, outputFolder)
 
-        # configure and generate gerber
-        self.report(5)
-        self.process_manager.generate_gerber(temp_dir)
+        try:
+            # generate gerber
+            self.progress(5)
+            self.process_manager.generate_gerber(temp_dir + "_g")
 
-        # generate drill file
-        self.report(15)
-        self.process_manager.generate_drills(temp_dir)
-        
-        # generate netlist
-        self.report(25)
-        self.process_manager.generate_netlist(temp_dir)
+            # generate drill file
+            self.progress(15)
+            self.process_manager.generate_drills(temp_dir + "_g")
 
-        # generate pick and place file
-        self.report(40)
-        self.process_manager.generate_positions(temp_dir)
+            # generate netlist
+            self.progress(25)
+            self.process_manager.generate_netlist(temp_dir)
 
-        # generate BOM file
-        self.report(60)
-        self.process_manager.generate_bom(temp_dir)
+            # generate pick and place file
+            self.progress(40)
+            self.process_manager.generate_positions(temp_dir)
 
-        # generate production archive
-        self.report(75)
-        temp_file = self.process_manager.generate_archive(temp_dir, temp_file)
+            # generate BOM file
+            self.progress(60)
+            self.process_manager.generate_bom(temp_dir)
+
+            # generate production archive
+            self.progress(75)
+            temp_file = self.process_manager.generate_archive(temp_dir + "_g", temp_file)
+            shutil.move(temp_file, temp_dir)
+            shutil.rmtree(temp_dir + "_g")
+            temp_file = os.path.join(temp_dir, os.path.basename(temp_file))
+        except Exception as e:
+            wx.MessageBox(str(e), "Error", wx.OK | wx.ICON_ERROR)
+            self.progress(-1)
+            return
 
         # progress bar done animation
         read_so_far = 0
@@ -60,20 +74,44 @@ class ProcessThread(Thread):
                     break
                 read_so_far += len(data)
                 percent = read_so_far * 1e2 / total_size
-                self.report(75 + percent / 8)
+                self.progress(75 + percent / 8)
 
+        # generate gerber name
+        title_block = self.process_manager.board.GetTitleBlock()
+        title = title_block.GetTitle()
+        revision = title_block.GetRevision()
+        company = title_block.GetCompany()
+        file_date = title_block.GetDate()
+
+        if (hasattr(self.process_manager.board, "GetProject") and hasattr(pcbnew, "ExpandTextVars")):
+            project = self.process_manager.board.GetProject()
+            title = pcbnew.ExpandTextVars(title, project)
+            revision = pcbnew.ExpandTextVars(revision, project)
+            company = pcbnew.ExpandTextVars(company, project)
+            file_date = pcbnew.ExpandTextVars(file_date, project)
+
+        # make output dir
+        filename = os.path.splitext(os.path.basename(self.process_manager.board.GetFileName()))[0]
+        name = "_".join(("{} {} {}".format(title or filename, revision or '', timestamp).strip()).split())
+        output_path = os.path.join(project_directory, outputFolder, name)
+        os.makedirs(output_path)
+
+        # rename gerber archive
+        gerberArchiveName = "_".join(("{} {}".format(title or filename, revision or '').strip() + '.zip').split())
         os.rename(temp_file, os.path.join(temp_dir, gerberArchiveName))
 
+        # copy to & open output dir
         try:
             if os.path.exists(output_path):
                 shutil.rmtree(output_path)
 
             shutil.copytree(temp_dir, output_path)
             webbrowser.open("file://%s" % (output_path))
+            shutil.rmtree(temp_dir)
         except Exception as e: 
             webbrowser.open("file://%s" % (temp_dir))
 
-        self.report(-1)
+        self.progress(-1)
 
-    def report(self, status):
-        wx.PostEvent(self.wx, StatusEvent(status))
+    def progress(self, percent):
+        wx.PostEvent(self.wx, StatusEvent(percent))
